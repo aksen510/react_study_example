@@ -1,0 +1,177 @@
+/* StatemgrPage 스타일 */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background: #111;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.header {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.description {
+  margin-bottom: 1.5rem;
+  color: #a0aec0;
+}
+
+.navLinks {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.link {
+  color: #a0aec0;
+  text-decoration: none;
+  transition: all 0.3s;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.link:hover {
+  color: #fff;
+  background: #2d3748;
+}
+
+.activeLink {
+  composes: link;
+  color: #4299e1;
+  font-weight: bold;
+  background: #2c5282;
+}
+
+/* ReduxExample 스타일 */
+.postContainer {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #111;
+  color: #fff;
+}
+
+.postTitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.postGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 1:1 비율 */
+  gap: 2rem;
+  height: calc(100vh - 150px); /* 화면 높이에서 상단 여백 제외 */
+}
+
+.postList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: auto; /* 스크롤 추가 */
+  padding-right: 1rem; /* 스크롤바 여백 */
+  height: 100%;
+}
+
+.postItem {
+  padding: 1rem;
+  border: 1px solid #333;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  background: #1a1a1a;
+}
+
+.postItem:hover {
+  border-color: #4a5568;
+  background: #2d3748;
+}
+
+.postItem.selected {
+  border-color: #4299e1;
+  background: #2c5282;
+}
+
+.postItemTitle {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.postItemBody {
+  font-size: 0.875rem;
+  color: #a0aec0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.postDetail {
+  padding: 1rem;
+  border: 1px solid #333;
+  border-radius: 0.5rem;
+  height: 100%;
+  overflow-y: auto; /* 스크롤 추가 */
+  background: #1a1a1a;
+}
+
+.postDetailTitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.postDetailBody {
+  line-height: 1.6;
+}
+
+/* 스크롤바 스타일링 */
+.postList::-webkit-scrollbar,
+.postDetail::-webkit-scrollbar {
+  width: 6px;
+}
+
+.postList::-webkit-scrollbar-track,
+.postDetail::-webkit-scrollbar-track {
+  background: #2d3748;
+  border-radius: 3px;
+}
+
+.postList::-webkit-scrollbar-thumb,
+.postDetail::-webkit-scrollbar-thumb {
+  background: #4a5568;
+  border-radius: 3px;
+}
+
+.postList::-webkit-scrollbar-thumb:hover,
+.postDetail::-webkit-scrollbar-thumb:hover {
+  background: #718096;
+}
+
+/* 에러 메시지 */
+.error {
+  color: #fc8181;
+  border-color: #fc8181;
+  background: #2d2828;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+
+/* 로딩 상태 */
+.loading {
+  padding: 1rem;
+  text-align: center;
+  color: #a0aec0;
+}
